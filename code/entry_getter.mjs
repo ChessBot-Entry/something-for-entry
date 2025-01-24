@@ -23,7 +23,7 @@ export const waitForEntryjs = async (callback) => {
     else if (callback instanceof Promise)
         awaits['entryjs_load'].push(callback)
 
-    return promises['entryjs_load']
+    return promises['entryjs_load'].promise
 }
 
 const waitForElement = async(targetNode, callback, config, timeout) => {
